@@ -1,0 +1,154 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #f5f5f5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Khung nội dung dùng chung: căn giữa, rộng tối đa 1100px */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #9f224e;
+}
+
+.header p {
+    color: #666;
+}
+
+/* Navigation Menu (Flexbox) */
+.navbar {
+    background: #9f224e;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.navbar a {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section (Grid: 2 cột, trái rộng gấp đôi phải) */
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main-column,
+.side-column {
+    background: #fff;
+    padding: 20px;
+}
+
+/* Khung giữ chỗ cho hình ảnh */
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d9d9d9;
+    color: #666;
+    height: 280px;
+}
+
+.placeholder.small {
+    height: 100px;
+}
+
+.featured {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.featured h2 {
+    margin: 12px 0 6px;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item h3 {
+    margin-bottom: 4px;
+}
+
+.side-column h2 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #9f224e;
+}
+
+.side-column ol {
+    padding-left: 20px;
+}
+
+.side-column li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.side-column a:hover {
+    color: #9f224e;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive: màn hình nhỏ chuyển về 1 cột */
+@media (max-width: 800px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .news-item {
+        grid-template-columns: 1fr;
+    }
+}
